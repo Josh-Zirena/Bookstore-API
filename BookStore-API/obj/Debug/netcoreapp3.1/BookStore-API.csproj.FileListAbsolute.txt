@@ -136,6 +136,13 @@ C:\project\C#\BookStore-API\BookStore-API\bin\Debug\netcoreapp3.1\ru\Microsoft.C
 C:\project\C#\BookStore-API\BookStore-API\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\project\C#\BookStore-API\BookStore-API\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\project\C#\BookStore-API\BookStore-API\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\project\C#\BookStore-API\BookStore-API\bin\Debug\netcoreapp3.1\Microsoft.OpenApi.dll
+C:\project\C#\BookStore-API\BookStore-API\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.Swagger.dll
+C:\project\C#\BookStore-API\BookStore-API\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\project\C#\BookStore-API\BookStore-API\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\project\C#\BookStore-API\BookStore-API\bin\Debug\netcoreapp3.1\BookStore-API.xml
+C:\project\C#\BookStore-API\BookStore-API\bin\Debug\netcoreapp3.1\NLog.dll
+C:\project\C#\BookStore-API\BookStore-API\bin\Debug\netcoreapp3.1\NLog.Extensions.Logging.dll
 C:\project\C#\BookStore-API\BookStore-API\obj\Debug\netcoreapp3.1\BookStore-API.csproj.CoreCompileInputs.cache
 C:\project\C#\BookStore-API\BookStore-API\obj\Debug\netcoreapp3.1\BookStore-API.MvcApplicationPartsAssemblyInfo.cs
 C:\project\C#\BookStore-API\BookStore-API\obj\Debug\netcoreapp3.1\BookStore-API.MvcApplicationPartsAssemblyInfo.cache
