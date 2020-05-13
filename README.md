@@ -1,2 +1,0 @@
-# Bookstore-API
-bookstore api

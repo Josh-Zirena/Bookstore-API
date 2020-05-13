@@ -17,6 +17,8 @@ using System.Reflection;
 using System.IO;
 using BookStore_API.Contracts;
 using BookStore_API.Services;
+using AutoMapper;
+using BookStore_API.Mappings;
 
 namespace BookStore_API
 {
@@ -38,23 +40,30 @@ namespace BookStore_API
             services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
                 .AddEntityFrameworkStores<ApplicationDbContext>();
 
+            services.AddCors(o => {
+                o.AddPolicy("CorsPolicy",
+                    builder => builder.AllowAnyOrigin()
+                    .AllowAnyMethod()
+                    .AllowAnyHeader());
+            });
+
+            services.AddAutoMapper(typeof(Maps));
+
             services.AddSwaggerGen(c => {
-                c.SwaggerDoc("v1", new OpenApiInfo 
-                { 
-                    Title = "Bookstore API",
+                c.SwaggerDoc("v1", new OpenApiInfo
+                {
+                    Title = "Book Store API",
                     Version = "v1",
-                    Description = "Creating a bookstore API."
+                    Description = "This is an API for a Book Store"
                 });
 
-                var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
-                var xPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
-                c.IncludeXmlComments(xPath);
+                var xfile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
+                var xpath = Path.Combine(AppContext.BaseDirectory, xfile);
+                c.IncludeXmlComments(xpath);
             });
 
             services.AddSingleton<ILoggerService, LoggerService>();
 
-
-            
             services.AddControllers();
         }
 
@@ -76,11 +85,14 @@ namespace BookStore_API
             app.UseSwagger();
 
             app.UseSwaggerUI(c => {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Bookstore API");
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Book Store API");
                 c.RoutePrefix = "";
             });
 
             app.UseHttpsRedirection();
+
+            app.UseCors("CorsPolicy");
+
 
             app.UseRouting();
 
